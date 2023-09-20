@@ -6,7 +6,7 @@
 /*   By: hlindeza <hlindeza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 22:08:21 by hlindeza          #+#    #+#             */
-/*   Updated: 2023/09/20 01:10:13 by hlindeza         ###   ########.fr       */
+/*   Updated: 2023/09/20 10:40:41 by hlindeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int	more_errors(char **numbrs, int tmp, int i)
 {
 	if (!(ft_isnumber(numbrs[i])) || (!(check_dup(tmp, numbrs, i))))
 		return (0);
+	return (1);
 }
 
 void	check_args(int argc, char **argv)

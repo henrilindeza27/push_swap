@@ -6,7 +6,7 @@
 /*   By: hlindeza <hlindeza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 09:49:35 by hlindeza          #+#    #+#             */
-/*   Updated: 2023/09/19 14:36:46 by hlindeza         ###   ########.fr       */
+/*   Updated: 2023/09/20 10:41:00 by hlindeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ void	radix(t_stack **stack_a, t_stack **stack_b)
 		list_size = ft_lstsize_nv(*stack_a);
 		while (list_size--)
 		{
-			if (((*stack_a)->index >> i) & 1 == 1)
+			if ((((*stack_a)->index >> i) & 1) == 1)
 				ra(stack_a);
 			else
 				pb(stack_b, stack_a);
