@@ -6,7 +6,7 @@
 /*   By: hlindeza <hlindeza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:12:15 by hlindeza          #+#    #+#             */
-/*   Updated: 2023/09/19 15:47:59 by hlindeza         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:35:07 by hlindeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	ft_free(char **str)
 		;
 	while (i >= 0)
 		free(str[i--]);
+	free(str);
 }
 
 int	a_is_sorted(t_stack **stack)
