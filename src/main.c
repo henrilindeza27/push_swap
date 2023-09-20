@@ -6,7 +6,7 @@
 /*   By: hlindeza <hlindeza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 14:28:15 by hlindeza          #+#    #+#             */
-/*   Updated: 2023/09/20 00:02:07 by hlindeza         ###   ########.fr       */
+/*   Updated: 2023/09/20 01:10:50 by hlindeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ int	main(int argc, char **argv)
 
 	if (argc < 1)
 		return (0);
+	if (argc == 2)
+		if (ft_strncmp(argv[1], "", 1) == 0 || ft_strncmp(argv[1], " ", 1) == 0
+			|| ft_strncmp(argv[1], "\0", 1) == 0)
+			return (0);
 	check_args(argc, argv);
 	stack_a = (t_stack **)malloc(sizeof(t_stack));
 	stack_b = (t_stack **)malloc(sizeof(t_stack));
