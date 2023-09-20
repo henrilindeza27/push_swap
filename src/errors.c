@@ -6,7 +6,7 @@
 /*   By: hlindeza <hlindeza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 22:08:21 by hlindeza          #+#    #+#             */
-/*   Updated: 2023/09/20 10:40:41 by hlindeza         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:22:54 by hlindeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,12 +83,12 @@ void	check_args(int argc, char **argv)
 	while (numbrs[++i])
 	{
 		tmp = ft_atoi(numbrs[i]);
-		if (more_errors(numbrs, tmp, i) == 0 || (tmp < -2147483648
+		if (!more_errors(numbrs, tmp, i) || (tmp < -2147483648
 				|| tmp > 2147483647))
 		{
-			ft_printf("Error\n");
-			ft_free(numbrs);
-			exit(1);
+			if (argc == 2)
+				ft_free(numbrs);
+			ft_error("Error");
 		}
 	}
 	if (argc == 2)

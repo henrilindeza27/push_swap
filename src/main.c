@@ -6,11 +6,17 @@
 /*   By: hlindeza <hlindeza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 14:28:15 by hlindeza          #+#    #+#             */
-/*   Updated: 2023/09/20 01:10:50 by hlindeza         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:20:49 by hlindeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
+
+void	ft_error(char *txt)
+{
+	ft_printf("%s\n", txt);
+	exit(1);
+}
 
 int	main(int argc, char **argv)
 {

@@ -6,7 +6,7 @@
 /*   By: hlindeza <hlindeza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 14:05:06 by hlindeza          #+#    #+#             */
-/*   Updated: 2023/09/20 00:53:48 by hlindeza         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:21:14 by hlindeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int					ft_lstsize_nv(t_stack *lst);
 t_stack				*ft_lstlast_nv(t_stack *lst);
 
 int					a_is_sorted(t_stack **stack);
+void				ft_error(char *txt);
 void				check_args(int argc, char **argv);
 void				put_indexs(t_stack **stack);
 void				init_stacks(t_stack **stack, int argc, char **argv);
@@ -39,7 +40,6 @@ void				free_stack(t_stack **stack);
 void				ft_free(char **str);
 int					get_bigger_index(t_stack **stack);
 int					more_errors(char **numbrs, int tmp, int i);
-char				**save_and_check_arg(char **argv, int argc, int *i);
 
 int					swap(t_stack **stack);
 int					rotate(t_stack **stack);
